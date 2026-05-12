@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EGOY THINKING | Tenangkan Pikiran & Kendalikan Diri</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#050816;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* BACKGROUND */
+    .hero{
+      width:100%;
+      min-height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
+      url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:30px;
+      position:relative;
+    }
+
+    /* NAVBAR */
+    nav{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      z-index:999;
+      backdrop-filter:blur(10px);
+      background:rgba(0,0,0,0.25);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:700;
+      color:#00d9ff;
+      letter-spacing:2px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:30px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-size:15px;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#00d9ff;
+    }
+
+    /* HERO CONTENT */
+    .hero-content{
+      max-width:850px;
+      animation:fadeUp 1.5s ease;
+    }
+
+    .hero-content h1{
+      font-size:70px;
+      margin-bottom:20px;
+      line-height:1.1;
+    }
+
+    .hero-content h1 span{
+      color:#00d9ff;
+    }
+
+    .hero-content p{
+      color:#d4d4d4;
+      font-size:18px;
+      line-height:1.8;
+      margin-bottom:40px;
+    }
+
+    .btn-group{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:15px 35px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.4s;
+      border:none;
+    }
+
+    .btn-primary{
+      background:#00d9ff;
+      color:#000;
+      box-shadow:0 0 20px rgba(0,217,255,0.4);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-5px);
+      box-shadow:0 0 30px rgba(0,217,255,0.7);
+    }
+
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,0.2);
+      color:white;
+      background:rgba(255,255,255,0.05);
+    }
+
+    .btn-secondary:hover{
+      background:white;
+      color:black;
+    }
+
+    /* SECTION */
+    section{
+      padding:100px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:70px;
+    }
+
+    .section-title h2{
+      font-size:45px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#aaa;
+      max-width:700px;
+      margin:auto;
+      line-height:1.8;
+    }
+
+    /* CARDS */
+    .card-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      padding:35px;
+      border-radius:25px;
+      transition:0.4s;
+      backdrop-filter:blur(10px);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      border-color:#00d9ff;
+      box-shadow:0 0 30px rgba(0,217,255,0.15);
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#00d9ff;
+    }
+
+    .card p{
+      color:#cfcfcf;
+      line-height:1.8;
+      font-size:15px;
+    }
+
+    /* QUOTE */
+    .quote-section{
+      text-align:center;
+      background:linear-gradient(180deg,#07111f,#050816);
+      border-top:1px solid rgba(255,255,255,0.06);
+      border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+
+    .quote{
+      max-width:850px;
+      margin:auto;
+      font-size:30px;
+      line-height:1.8;
+      color:#fff;
+      font-weight:300;
+    }
+
+    .quote span{
+      color:#00d9ff;
+    }
+
+    /* FOOTER */
+    footer{
+      padding:50px 8%;
+      text-align:center;
+      color:#888;
+      background:#02040c;
+    }
+
+    footer h3{
+      color:#00d9ff;
+      margin-bottom:15px;
+      font-size:28px;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(50px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* MOBILE */
+    @media(max-width:768px){
+
+      nav{
+        padding:18px 5%;
+      }
+
+      nav ul{
+        display:none;
+      }
+
+      .hero-content h1{
+        font-size:42px;
+      }
+
+      .hero-content p{
+        font-size:16px;
+      }
+
+      .quote{
+        font-size:22px;
+      }
+
+      .section-title h2{
+        font-size:35px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">EGOY THINKING</div>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#artikel">Artikel</a></li>
+      <li><a href="#mind">Mindset</a></li>
+      <li><a href="#quote">Motivasi</a></li>
+      <li><a href="#footer">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+      <h1>
+        Tenangkan <span>Pikiran</span><br>
+        Kendalikan Dirimu
+      </h1>
+
+      <p>
+        EGOY THINKING adalah ruang digital untuk membantu menenangkan hati,
+        mengontrol emosi, dan membangun ketenangan dalam hidup melalui
+        pengendalian diri dan kesadaran pikiran.
+      </p>
+
+      <div class="btn-group">
+        <a href="#artikel" class="btn btn-primary">Mulai Membaca</a>
+        <a href="#quote" class="btn btn-secondary">Motivasi Hari Ini</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ARTIKEL -->
+  <section id="artikel">
+
+    <div class="section-title">
+      <h2>Artikel Pengendalian Diri</h2>
+
+      <p>
+        Pelajari cara menenangkan pikiran, mengendalikan emosi,
+        dan menjadi pribadi yang lebih tenang dalam menghadapi hidup.
+      </p>
+    </div>
+
+    <div class="card-container">
+
+      <div class="card">
+        <h3>Overthinking</h3>
+        <p>
+          Belajar menghentikan pikiran berlebihan dan fokus
+          terhadap hal yang benar-benar penting dalam hidup.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Mengontrol Emosi</h3>
+        <p>
+          Cara menjadi lebih tenang saat marah, kecewa,
+          dan menghadapi orang toxic di kehidupan sehari-hari.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Ketenangan Hati</h3>
+        <p>
+          Temukan ketenangan melalui kesadaran diri,
+          penerimaan hidup, dan pengendalian pikiran negatif.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MINDSET -->
+  <section id="mind">
+
+    <div class="section-title">
+      <h2>Mindset Positif</h2>
+
+      <p>
+        Pengendalian diri dimulai dari cara berpikir.
+        Bangun pikiran yang lebih damai dan kuat setiap hari.
+      </p>
+    </div>
+
+    <div class="card-container">
+
+      <div class="card">
+        <h3>Disiplin Diri</h3>
+        <p>
+          Disiplin bukan tentang keras pada diri sendiri,
+          tetapi tentang konsisten terhadap tujuan hidup.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Belajar Diam</h3>
+        <p>
+          Tidak semua hal harus dibalas.
+          Terkadang ketenangan adalah bentuk kekuatan terbesar.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Kesadaran Diri</h3>
+        <p>
+          Mengenali diri sendiri membantu kita memahami
+          emosi, keputusan, dan arah kehidupan.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote-section" id="quote">
+
+    <div class="quote">
+      “Orang yang mampu <span>mengendalikan pikirannya</span>,
+      akan lebih mudah mengendalikan hidupnya.”
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+
+    <h3>EGOY THINKING</h3>
+
+    <p>
+      Website pengendalian diri, ketenangan hati,
+      dan pengembangan pikiran positif.
+    </p>
+
+    <br>
+
+    <p>© 2026 EGOY THINKING — All Rights Reserved</p>
+
+  </footer>
+
+</body>
+</html>
