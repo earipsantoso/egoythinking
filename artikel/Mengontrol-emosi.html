@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mengontrol Emosi | EGOY THINKING</title>
+
+  <meta name="description" content="Belajar mengontrol emosi agar hidup lebih tenang, dewasa, dan penuh pengendalian diri.">
+  <meta name="keywords" content="mengontrol emosi, pengendalian diri, emosi, ketenangan hati, self control">
+  <meta name="author" content="EGOY THINKING">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#050816;
+      color:white;
+      line-height:1.8;
+    }
+
+    nav{
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:rgba(0,0,0,0.4);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+
+    .logo{
+      color:#00d9ff;
+      font-size:28px;
+      font-weight:700;
+      letter-spacing:2px;
+    }
+
+    nav ul{
+      display:flex;
+      gap:30px;
+      list-style:none;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
+      font-size:15px;
+    }
+
+    nav ul li a:hover{
+      color:#00d9ff;
+    }
+
+    .hero{
+      width:100%;
+      height:60vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
+      url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:30px;
+    }
+
+    .hero-content{
+      max-width:850px;
+    }
+
+    .hero-content h1{
+      font-size:55px;
+      margin-bottom:20px;
+    }
+
+    .hero-content p{
+      color:#d0d0d0;
+      font-size:18px;
+    }
+
+    .article-container{
+      max-width:900px;
+      margin:auto;
+      padding:80px 25px;
+    }
+
+    .article-box{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.06);
+      padding:50px;
+      border-radius:30px;
+      backdrop-filter:blur(10px);
+    }
+
+    .article-box h2{
+      color:#00d9ff;
+      margin-top:40px;
+      margin-bottom:15px;
+      font-size:30px;
+    }
+
+    .article-box p{
+      color:#dddddd;
+      margin-bottom:20px;
+      font-size:17px;
+    }
+
+    .article-box blockquote{
+      margin:30px 0;
+      padding:25px;
+      border-left:4px solid #00d9ff;
+      background:rgba(255,255,255,0.04);
+      color:#ffffff;
+      font-size:20px;
+      border-radius:10px;
+      font-style:italic;
+    }
+
+    .back-btn{
+      display:inline-block;
+      margin-top:40px;
+      padding:14px 30px;
+      border-radius:50px;
+      background:#00d9ff;
+      color:black;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .back-btn:hover{
+      transform:translateY(-4px);
+      box-shadow:0 0 25px rgba(0,217,255,0.4);
+    }
+
+    footer{
+      padding:50px 8%;
+      text-align:center;
+      background:#02040c;
+      color:#888;
+      border-top:1px solid rgba(255,255,255,0.05);
+    }
+
+    footer h3{
+      color:#00d9ff;
+      margin-bottom:15px;
+      font-size:28px;
+    }
+
+    @media(max-width:768px){
+
+      nav ul{
+        display:none;
+      }
+
+      .hero-content h1{
+        font-size:38px;
+      }
+
+      .article-box{
+        padding:30px;
+      }
+
+      .article-box h2{
+        font-size:24px;
+      }
+
+      .article-box p{
+        font-size:16px;
+      }
+
+      .article-box blockquote{
+        font-size:18px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">EGOY THINKING</div>
+
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#">Artikel</a></li>
+      <li><a href="#">Motivasi</a></li>
+      <li><a href="#">Tentang</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>Mengontrol Emosi</h1>
+
+      <p>
+        Belajar mengendalikan emosi agar hidup lebih tenang dan tidak mudah terbawa suasana.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- ARTICLE -->
+
+  <div class="article-container">
+
+    <div class="article-box">
+
+      <p>
+        Emosi adalah bagian dari kehidupan manusia.
+        Namun jika tidak dikendalikan, emosi bisa merusak hubungan,
+        membuat pikiran tidak tenang, dan menimbulkan penyesalan.
+      </p>
+
+      <blockquote>
+        “Orang kuat bukan yang selalu menang,
+        tetapi yang mampu mengendalikan emosinya.”
+      </blockquote>
+
+      <h2>1. Jangan Langsung Bereaksi</h2>
+
+      <p>
+        Saat sedang marah atau kecewa,
+        jangan langsung berbicara atau bertindak.
+      </p>
+
+      <p>
+        Beri waktu beberapa detik untuk menenangkan diri
+        agar keputusan yang diambil tidak berdasarkan emosi sesaat.
+      </p>
+
+      <h2>2. Belajar Mengendalikan Pikiran</h2>
+
+      <p>
+        Banyak emosi muncul karena pikiran yang terlalu negatif.
+        Semakin dipikirkan, semakin besar kemarahan dan rasa kecewa.
+      </p>
+
+      <p>
+        Cobalah melihat masalah dengan lebih tenang
+        dan jangan terlalu cepat menyimpulkan sesuatu.
+      </p>
+
+      <h2>3. Tarik Nafas dan Tenangkan Diri</h2>
+
+      <p>
+        Saat emosi memuncak, tubuh juga ikut tegang.
+        Menarik nafas perlahan dapat membantu hati menjadi lebih stabil.
+      </p>
+
+      <p>
+        Kadang diam dan menenangkan diri jauh lebih baik
+        daripada meluapkan emosi tanpa arah.
+      </p>
+
+      <h2>4. Hindari Membalas Dengan Kemarahan</h2>
+
+      <p>
+        Membalas emosi dengan emosi hanya akan memperbesar masalah.
+      </p>
+
+      <p>
+        Orang yang mampu menahan diri biasanya lebih dihargai
+        karena terlihat dewasa dan bijaksana.
+      </p>
+
+      <h2>5. Fokus Pada Solusi</h2>
+
+      <p>
+        Terlalu fokus pada rasa marah hanya membuat hati semakin lelah.
+      </p>
+
+      <p>
+        Belajarlah memikirkan solusi daripada terus memikirkan kesalahan
+        atau ucapan orang lain.
+      </p>
+
+      <blockquote>
+        “Semakin tenang seseorang,
+        semakin kuat dirinya menghadapi kehidupan.”
+      </blockquote>
+
+      <h2>Kesimpulan</h2>
+
+      <p>
+        Mengontrol emosi bukan berarti memendam semua perasaan,
+        tetapi belajar mengelola diri dengan lebih bijaksana.
+      </p>
+
+      <p>
+        Dengan hati yang lebih tenang,
+        kita dapat menjalani hidup dengan pikiran yang lebih jernih
+        dan hubungan yang lebih baik dengan orang lain.
+      </p>
+
+      <a href="../index.html" class="back-btn">
+        Kembali ke Home
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h3>EGOY THINKING</h3>
+
+    <p>
+      Website pengendalian diri dan ketenangan pikiran.
+    </p>
+
+    <br>
+
+    <p>© 2026 EGOY THINKING — All Rights Reserved</p>
+
+  </footer>
+
+</body>
+</html>
